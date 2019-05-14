@@ -41,13 +41,13 @@ Type the command below to install the required packages which are ***express, je
 To setup our server we need to type some code inside the index.js file which is the source file. It is written all in JavaScript. We need to require the packages and setup the server:
 
 
-` const express = require('express');
+``` const express = require('express');
 
 function plus(a, b) {
   return a + b;
 }
 module.exports = plus;
-`
+ ```
 
 This is a code that adds two numbers `a` and `b` returning their `sum a+b`.  The function can then be exported using `module.exports = plus` so it can be accessed from other files on the server
 After that we need to write a test file to confirm if the function for the code is run is right. The file would be named index.test.js like so:
