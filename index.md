@@ -41,34 +41,42 @@ Type the command below to install the required packages which are ***express, je
 To setup our server we need to type some code inside the index.js file which is the source file. It is written all in JavaScript. We need to require the packages and setup the server:
 
 
-### Markdown
+` const express = require('express');
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+function plus(a, b) {
+  return a + b;
+}
+module.exports = plus;
+`
 
-```markdown
-Syntax highlighted code block
+This is a code that adds two numbers `a` and `b` returning their `sum a+b`.  The function can then be exported using `module.exports = plus` so it can be accessed from other files on the server
+After that we need to write a test file to confirm if the function for the code is run is right. The file would be named index.test.js like so:
 
-# Header 1
-## Header 2
-### Header 3
+`  const plus = require('./index');
 
-- Bulleted
-- List
+test('adds 1 + 2 to equal 3', plusTest);
 
-1. Numbered
-2. List
+function plusTest() {
+  expect(plus(1, 2)).toBe(3);
+}
+`
 
-**Bold** and _Italic_ and `Code` text
+There is a function called **plus** that receives two numbers and returns those two sums added together. Looking at the syntax, we have a function plus that requires the source file index.js which is the same directory, **expect** and **tobe** are functions that are part of jest. plus is my function test function is part of jest. The code could be written in a more elegant way however for simplicity its best left like this
+We then run the command in the terminal
 
-[Link](url) and ![Image](src)
-```
+`npm test`
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+`PASS  ./index.test.js
+  √ adds 1 + 2 to equal 3 (5ms)
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        3.615s
+Ran all test suites. `
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/holarmyde/testtutorial.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+As seen above this means the test case passed. HOPE you find this useful. ***There are more samples ahead though.****
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+
