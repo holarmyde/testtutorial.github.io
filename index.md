@@ -16,7 +16,7 @@ Install node from this link
 ## JavaScript and Node.js
 The first sample code is a basic code that adds two numbers together to get the sum. This just shows how to use JavaScript for unit testing. Now we need to setup our JavaScript and our Node.js Server. First let’s create a JavaScript file. Let’s call it index.js.
 
-***Image***
+[[[Code Diagram](https://drive.google.com/file/d/1cDKXEPX3oHwcC_9KLTbyGBriKEndWNpQ/view?usp=sharing)]]
 
 
 we are going to create a folder called Test_Tutorial then create a file called index.js inside the Server folder. This will have the code for the server to run. After creating the file, we need to run this command in the command line or terminal in the Server folder   (if you are using VScode go to the top left side which is the view tab and when it scrolls down you can click on terminal to get the terminal environment)
