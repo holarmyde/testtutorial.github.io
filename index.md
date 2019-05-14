@@ -41,7 +41,8 @@ Type the command below to install the required packages which are ***express, je
 To setup our server we need to type some code inside the index.js file which is the source file. It is written all in JavaScript. We need to require the packages and setup the server:
 
 
-``` const express = require('express');
+``` 
+const express = require('express');
 
 function plus(a, b) {
   return a + b;
@@ -52,14 +53,16 @@ module.exports = plus;
 This is a code that adds two numbers `a` and `b` returning their `sum a+b`.  The function can then be exported using `module.exports = plus` so it can be accessed from other files on the server
 After that we need to write a test file to confirm if the function for the code is run is right. The file would be named index.test.js like so:
 
-`  const plus = require('./index');
+```
+const plus = require('./index');
 
 test('adds 1 + 2 to equal 3', plusTest);
 
 function plusTest() {
   expect(plus(1, 2)).toBe(3);
+  
 }
-`
+```
 
 There is a function called **plus** that receives two numbers and returns those two sums added together. Looking at the syntax, we have a function plus that requires the source file index.js which is the same directory, **expect** and **tobe** are functions that are part of jest. plus is my function test function is part of jest. The code could be written in a more elegant way however for simplicity its best left like this
 We then run the command in the terminal
