@@ -70,13 +70,15 @@ We then run the command in the terminal
 `npm test`
 
 
-`PASS  ./index.test.js
+```
+PASS  ./index.test.js
   √ adds 1 + 2 to equal 3 (5ms)
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
 Time:        3.615s
-Ran all test suites. `
+Ran all test suites. 
+```
 
 
 As seen above this means the test case passed. HOPE you find this useful. ***There are more samples ahead though.****
