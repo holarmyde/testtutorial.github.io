@@ -1,19 +1,19 @@
-## Welcome to GitHub Pages
+
 # TESTING_TUTORIAL
 
-## Visual Studio Code on Windows
+## 1) Visual Studio Code on Windows
 ### Installation
 1.	Download the Visual Studio Code installer for Windows.
 2.	Once it is downloaded, run the installer (VSCodeUserSetup-{version}.exe). This will only take a minute.
 3.	By default, VS Code is installed under C:\users\{username}\AppData\Local\Programs\Microsoft VS Code.
 
 
-## Node
+## 2) Node
 Install node from this link
 [[https://nodejs.org/en/]]
 
 
-## JavaScript and Node.js
+## 3) JavaScript and Node.js
 The first sample code is a basic code that adds two numbers together to get the sum. This just shows how to use JavaScript for unit testing. Now we need to setup our JavaScript and our Node.js Server. First let’s create a JavaScript file. Let’s call it index.js.
 
 [[[Code Diagram](https://drive.google.com/file/d/1cDKXEPX3oHwcC_9KLTbyGBriKEndWNpQ/view?usp=sharing)]]
@@ -38,7 +38,36 @@ Type the command below to install the required packages which are ***express, je
     "test": "jest"
   }
 }  `
-To setup our server we need to type some code inside the index.js file which is the source file. It is written all in JavaScript. We need to require the packages and setup the server:
+
+the package.json file is below:
+```
+{
+  "name": "fetchurl",
+  "version": "1.0.0",
+  "description": "tutorial purpose",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "Femi",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "handlebars": "^4.1.2",
+    "puppeteer": "^1.16.0",
+    "ytdl-core": "^0.29.1"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
+```
+- To setup our server we need to type some code inside the index.js file which is the source file. It is written all in JavaScript. We need to require the packages and setup the server:
 
 
 ``` 
@@ -50,7 +79,7 @@ function plus(a, b) {
 module.exports = plus;
  ```
 
-This is a code that adds two numbers `a` and `b` returning their `sum a+b`.  The function can then be exported using `module.exports = plus` so it can be accessed from other files on the server
+- This is a code that adds two numbers `a` and `b` returning their `sum a+b`.  The function can then be exported using `module.exports = plus` so it can be accessed from other files on the server
 After that we need to write a test file to confirm if the function for the code is run is right. The file would be named index.test.js like so:
 
 ```
@@ -64,7 +93,7 @@ function plusTest() {
 }
 ```
 
-There is a function called **plus** that receives two numbers and returns those two sums added together. Looking at the syntax, we have a function plus that requires the source file index.js which is the same directory, **expect** and **tobe** are functions that are part of jest. plus is my function test function is part of jest. The code could be written in a more elegant way however for simplicity its best left like this
+- There is a function called **plus** that receives two numbers and returns those two sums added together. Looking at the syntax, we have a function plus that requires the source file index.js which is the same directory, **expect** and **tobe** are functions that are part of jest. plus is my function test function is part of jest. The code could be written in a more elegant way however for simplicity its best left like this
 We then run the command in the terminal
 
 `npm test`
