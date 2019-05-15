@@ -2,6 +2,7 @@
 # TESTING_TUTORIAL
 
 ## 1) Visual Studio Code on Windows
+    VScode is code editor I would advise you use however you can pick any editor you are familiar with. Below is the installation procedure
 ### Installation
 1.	Download the Visual Studio Code installer for Windows.
 2.	Once it is downloaded, run the installer (VSCodeUserSetup-{version}.exe). This will only take a minute.
